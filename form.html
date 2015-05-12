@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pink: form</title>
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+
+<body class="inner-page">
+
+    <div class="main-wrapper">
+
+        <header class="page-header  page-header--close">
+            <div class="page-header__menu-wrapper">
+                <a href="#" class="page-header__logo-link">
+                    <img src="img/logo.png" alt="Pink Logo">
+                </a>
+                <a href="#" class="page-header__toggle  page-header__toggle--close">&#8801;</a>
+             </div>
+
+             <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__active-item"><a href="#">информация</a></li>
+                    <li><a href="#">возможности</a></li>
+                    <li><a href="#">отзывы</a></li>
+                    <li><a href="#">стоимость</a></li>
+                </ul>
+             </nav>
+
+        </header>
+
+        <main class="main-content">
+
+            <section class="contest">
+
+                <header class="top-header">
+                    <h1 class="page-title">Конкурс на самое безбашеное путешествие с Пинк</h1>
+                </header>
+
+
+                <div class="contest-wrapper">
+
+                    <h2 class="contest__title">Поделитесь своей историей и получите шанс выиграть
+                    ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</h2>
+
+                    <form class="contest-form" action="/echo" method="post" enctype="multipart/form-data">
+
+                        <fieldset class="contest-form__name">
+
+                            <ul class="contest-form__name-list">
+                                <li>
+                                    <label for="name-field">Имя: *</label>
+                                    <input id="name-field" name="name" type="text" placeholder="Введите ваше имя" required>
+                                </li>
+                                <li>
+                                    <label for="lastname-field">Фамилия: *</label>
+                                    <input id="lastname-field" name="lastname" type="text" placeholder="Укажите фамилию" required>
+                                </li>
+                                <li>
+                                    <label for="patronymic-field">Отчество:</label>
+                                    <input id="patronymic-field" name="patronymic" type="text" placeholder="Ну и отчество тоже">
+                                </li>
+                            </ul>
+
+                        </fieldset>
+
+                        <fieldset class="contest-form__used">
+
+                            <legend class="contest-form__legend">С каким приложением путешествовали? *</legend>
+
+                            <ul class="contest-form__used-list">
+
+                                <li>
+                                    <label for="ios-app">Pink для iOS</label>
+                                    <input id="ios-app" name="app" type="radio" value="ios" checked required>
+                                </li>
+                                <li>
+                                    <label for="android-app">Pink для Android</label>
+                                    <input id="android-app" name="app" type="radio" value="android" required>
+                                </li>
+                                <li>
+                                    <label for="win-app">Pink для Phone</label>
+                                    <input id="win-app" name="app" type="radio" value="win" required>
+                                </li>
+
+                            </ul>
+
+                        </fieldset>
+
+                        <fieldset class="contest-form__duration">
+
+                            <legend class="contest-form__legend">Когда вы путешествовали? *</legend>
+
+                            <ul class="contest-form__duration-list">
+                                <li>
+                                    <input id="date_departure" name="date_departure" type="date" required>
+                                    <label for="date_departure">Дата выезда:</label>
+                                </li>
+
+                                <li>
+                                    <div class="dur-ctr-wrapper">
+                                        <button class="btn btn--ctr" data-action="minus" type="button">
+                                            <span class="icon-minus"></span>
+                                        </button>
+
+                                        <input id="num_days" name="days" type="number" min="1" max="100" value="10">
+
+                                        <button class="btn btn--ctr" data-action="plus" type="button">
+                                            <span class="icon-plus"></span>
+                                        </button>
+                                    </div>
+                                    <label for="num_days">продолжительсность</label>
+                                </li>
+
+                                <li>
+                                    <input id="date_arrival" name="date_arrival" type="date" required>
+                                    <label for="date_arrival">Дата возвращения:</label>
+                                </li>
+                            </ul>
+
+                        </fieldset>
+
+                        <fieldset class="contest-form__travellers">
+
+                            <legend class="contest-form__legend">Количество попутчиков *</legend>
+
+                            <div class="travellers-ctr">
+                                <label for="num_travellers">продолжительсность</label>
+
+                                <button class="btn btn--ctr" data-action="minus" type="button">
+                                    <span class="icon-minus"></span>
+                                </button>
+
+                                <input id="num_travellers" name="travellers" type="number" min="1" max="20" value="2">
+
+                                <button class="btn btn--ctr" data-action="plus" type="button">
+                                    <span class="icon-plus"></span>
+                                </button>
+                            </div>
+
+                            <ol class="contest-form__travellers-list">
+
+                                <li>
+                                    <div class="traveller-item__name">
+                                        <div>
+                                            <span>№</span>
+                                            <label for="traveller-1">имя: *</label>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <input id="traveller-1" name="traveller-name-1" type="text" placeholder="Введите ваше имя">
+                                        </div>
+                                    </div>
+                                    <div class="traveller-item__nickname">
+                                        <label for="nickname-1">произвище:</label>
+                                        <input id="nickname-1" name="traveller-nickname-1" type="text" placeholder="Ну как же без этого!">
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="traveller-item__name">
+                                        <div>
+                                            <span>№</span>
+                                            <label for="traveller-2">имя: *</label>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <input id="traveller-2" name="traveller-name-2" type="text" placeholder="Введите ваше имя">
+                                        </div>
+                                    </div>
+                                    <div class="traveller-item__nickname">
+                                        <label for="nickname-2">произвище:</label>
+                                        <input id="nickname-2" name="traveller-nickname-2" type="text" placeholder="Ну как же без этого!">
+                                    </div>
+                                </li>
+
+                            </ol>
+
+                        </fieldset>
+
+                        <fieldset class="contest-form__achivments">
+
+                            <legend class="contest-form__legend">Ваши безбашенные достижения в путешествии</legend>
+
+                            <ul class="contest-form__achivments-list">
+
+                                <li>
+                                    <input type="checkbox" name="selfie" id="selfie" checked>
+                                    <label for="selfie">Сделал селфи с акулой</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="sunburn" id="sunburn" checked>
+                                    <label for="sunburn">Обгорел на пляже</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="norris" id="norris">
+                                    <label for="norris">Видел Чака Норриса</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="souvenirs" id="souvenirs">
+                                    <label for="souvenirs">Накупил сувениров</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="tower" id="tower" checked>
+                                    <label for="tower">Удержал башню</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="hotel" id="hotel">
+                                    <label for="hotel">Разгромил отель</label>
+                                </li>
+
+                            </ul>
+
+                        </fieldset>
+
+                        <fieldset class="contest-form__photos">
+
+                            <legend class="contest-form__legend">ваши фотографии из поездки *</legend>
+
+                            <div class="photos-btn-wrapper">
+                                <input id="upload-photo" type="file" name="photo">
+                                <label class="btn btn--upload-photo" for="upload-photo">загрузить фото</label>
+                            </div>
+
+                            <ul class="contest-form__photos">
+                                <li><img src="/img/photo1.jpg" alt=""></li>
+                                <li><img src="/img/photo2.jpg" alt=""></li>
+                                <li><img src="/img/photo3.jpg" alt=""></li>
+                                <li><img src="/img/photo4.jpg" alt=""></li>
+                                <li><img src="/img/photo5.jpg" alt=""></li>
+                                <li><img src="/img/photo6.jpg" alt=""></li>
+                                <li><img src="/img/photo7.jpg" alt=""></li>
+                                <li><img src="/img/photo8.jpg" alt=""></li>
+                            </ul>
+
+                        </fieldset>
+
+                        <button class="btn btn--submit" type="submit">отправить форму</button>
+
+                        <small class="contest__reference">* - обязательные поля</small>
+
+                    </form>
+
+                    <div class="contest-modal  contest-modal--success">
+                        <div class="contest-modal__title">Ваша заявка отправлена</div>
+                        <p class="contest-modal__message">Спасибо за ваше участие, ваша заявка уже поступила к нам.
+                        В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+                        <div class="modal-btn-wrapper">
+                            <button class="btn btn--close-modal" type="button">отправить форму</button>
+                        </div>
+                    </div>
+
+                    <div class="contest-modal  contest-modal--failure">
+                        <div class="contest-modal__title">Что-то пошло не так!</div>
+                        <p class="contest-modal__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+                        <button class="btn btn--close-modal" type="button">ок</button>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer class="page-footer">
+
+            <div class="page-footer__logo">
+                <a href="#"><img src="img/footer-logo.png" alt=""></a>
+            </div>
+
+            <div class="page-footer__social">
+                <a href="#"><i></i></a>
+                <a href="#"><i></i></a>
+                <a href="#"><i></i></a>
+            </div>
+
+            <div class="page-footer__copyright">
+                <span class="page-footer__copyright-dev">Разработано</span>
+                <i class="page-footer__copyright-dev-by"></i>
+            </div>
+
+        </footer>
+
+    </div>
+        <!-- <script src="js/script.js"></script> -->
+
+</body>
+</html>

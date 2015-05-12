@@ -2,16 +2,170 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8">
-  <title>HTML Academy: pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pink App</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 
 <body>
 
-  <p>Репозиторий создан для обучения на продвинутом онлайн-интенсиве «<a href="https://htmlacademy.ru/advanced_intensive">Создание веб-интерфейсов с помощью HTML и CSS</a>».</p>
+    <div class="main-wrapper">
 
-  <!-- <script src="js/script.js"></script> -->
+        <header class="page-header  page-header--close">
+
+            <div class="page-header__menu-wrapper">
+                <a href="#" class="page-header__logo-link">
+                    <img src="img/logo.png" alt="Pink Logo">
+                </a>
+                <a href="#" class="page-header__toggle  page-header__toggle--close">&#8801;</a>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__active-item"><a href="#">информация</a></li>
+                    <li><a href="#">возможности</a></li>
+                    <li><a href="#">отзывы</a></li>
+                    <li><a href="#">стоимость</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main class="main-content">
+
+            <section class="promo-app">
+
+                <header class="top-header top-header--promo">
+                    <h1 class="page-title">Взгляни на жизнь иначе!</h1>
+                    <img class="top-header__img" src="img/phone.png" alt="Pink Application">
+                </header>
+
+                <div class="promo-app__download">
+                    <a class="btn btn--download" href="#">Скачать приложение</a>
+
+                    <ul class="promo-app__download-list">
+                        <li><img src="img/ios.png" alt="Apple logo"></li>
+                        <li><img src="img/android.png" alt="Android logo"></li>
+                        <li><img src="img/windows-phone.png" alt="Windows logo"></li>
+                    </ul>
+
+                    <p class="promo-app__download-desc">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+                </div>
+
+            </section>
+
+            <section class="reasons">
+
+                <header class="reasons-header">
+                    <h1 class="reasons__title">
+                        <span>Устали от серости мегаполиса?</span>
+                        <span>Нам есть, что вам  предложить!</span>
+                    </h1>
+                </header>
+
+                <ul class="reasons__list">
+
+                    <li class="reasons__list-item">
+                        <h2>Поднимает настроение</h2>
+                        <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+                    </li>
+
+                    <li class="reasons__list-item">
+                        <h2>Меняет мир вокруг</h2>
+                        <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                    </li>
+
+                    <li class="reasons__list-item">
+                        <h2>Заводит новых друзей</h2>
+                        <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+                    </li>
+                </ul>
+
+                <img src="img/phone-feature.png" alt="">
+
+            </section>
+
+            <div class="reviews">
+                <div class="slider-reviews">
+                    <article class="slider-reviews__item">
+                        <h1 class="slider-reviews__header">Николай Петров</h1>
+                        <p class="slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                    </article>
+                    <div class="slider-reviews__pagination">
+                        <i class="slider-reviews__pagination-active"></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="price">
+
+                <div class="price__offer">
+                    <div class="price__plan">стандарт</div>
+                    <div class="price__value">3,99 USD</div>
+                </div>
+
+                <div class="price-slider">
+                    <table class="price__table">
+                        <tr>
+                            <td class="price__table-col-1">Розовый фильтр</td>
+                            <td class="price__table-col-2">
+                                <img src="/img/available.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="price__table-col-1">Смайлики</td>
+                            <td class="price__table-col-2">
+                                <img src="/img/available.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="price__table-col-1">Комментарии</td>
+                            <td class="price__table-col-2">
+                                <img src="/img/available.png" alt="">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="price__pagination">
+                        <i></i>
+                        <i class="price__pagination-active"></i>
+                        <i></i>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="page-footer">
+
+
+            <div class="page-footer__contacts">
+
+                <h2>Остались вопросы? Свяжитесь с нами!</h2>
+
+                <div class="page-footer__title">Звоните</div>
+                <a href="tel:+78125556666" class="page-footer__contact">+7 (812) 555-66-66</a>
+
+                <div class="page-footer__title">Пишите</div>
+                <a href="mailto:mail@htmlacademy.ru" class="page-footer__contact">mail@htmlacademy.ru</a>
+
+                <div class="page-footer__title">Приезжайте в гости</div>
+                <div class="page-footer__contact">ул. Большая Конюшенная, 19/8</div>
+
+            </div>
+
+            <div class="page-footer__map" id="yandex-map">
+                <img src="/img/map.png" alt="">
+            </div>
+
+
+        </footer>
+
+    </div>
+    <!-- <script src="js/script.js"></script> -->
 
 </body>
 </html>

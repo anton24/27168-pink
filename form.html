@@ -2,32 +2,38 @@
 <html lang="ru">
 
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Pink: form</title>
-        <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pink: form</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 
 <body class="inner-page">
 
     <div class="main-wrapper">
 
-        <header class="page-header  page-header--close">
-            <div class="page-header__menu-wrapper">
-                <a href="#" class="page-header__logo-link">
-                    <img src="img/logo.png" alt="Pink Logo">
-                </a>
-                <a href="#" class="page-header__toggle  page-header__toggle--close">&#8801;</a>
-             </div>
+        <header class="main-header">
 
-             <nav class="main-nav">
-                <ul class="main-nav__list">
-                    <li class="main-nav__active-item"><a href="#">информация</a></li>
-                    <li><a href="#">возможности</a></li>
-                    <li><a href="#">отзывы</a></li>
-                    <li><a href="#">стоимость</a></li>
+            <a class="main-header__logo" href="#">PINK</a>
+
+            <nav class="main-header__nav">
+                <ul class="main-header__list">
+                    <li class="main-header__list-item">
+                        <a class="main-header__link" href="#">информация</a>
+                    </li>
+                    <li class="main-header__list-item">
+                        <a class="main-header__link" href="#">возможности</a>
+                    </li>
+                    <li class="main-header__list-item">
+                        <a class="main-header__link" href="#">отзывы</a>
+                    </li>
+                    <li class="main-header__list-item">
+                        <a class="main-header__link" href="#">стоимость</a>
+                    </li>
                 </ul>
-             </nav>
+            </nav>
+
+            <button type="button" id="main-header-btn" class="btn-menu"></button>
 
         </header>
 
@@ -36,7 +42,7 @@
             <section class="contest">
 
                 <header class="top-header">
-                    <h1 class="page-title">Конкурс на самое безбашеное путешествие с Пинк</h1>
+                    <h1 class="top-header__title">Конкурс на самое безбашеное путешествие с Пинк</h1>
                 </header>
 
 
@@ -47,24 +53,22 @@
 
                     <form class="contest-form" action="/echo" method="post" enctype="multipart/form-data">
 
-                        <fieldset class="contest-form__name">
 
-                            <ul class="contest-form__name-list">
-                                <li>
-                                    <label for="name-field">Имя: *</label>
-                                    <input id="name-field" name="name" type="text" placeholder="Введите ваше имя" required>
-                                </li>
-                                <li>
-                                    <label for="lastname-field">Фамилия: *</label>
-                                    <input id="lastname-field" name="lastname" type="text" placeholder="Укажите фамилию" required>
-                                </li>
-                                <li>
-                                    <label for="patronymic-field">Отчество:</label>
-                                    <input id="patronymic-field" name="patronymic" type="text" placeholder="Ну и отчество тоже">
-                                </li>
-                            </ul>
+                        <ul class="contest-form__name-list">
+                            <li>
+                                <label for="name-field">Имя: *</label>
+                                <input id="name-field" name="name" type="text" placeholder="Введите ваше имя" required>
+                            </li>
+                            <li>
+                                <label for="lastname-field">Фамилия: *</label>
+                                <input id="lastname-field" name="lastname" type="text" placeholder="Укажите фамилию" required>
+                            </li>
+                            <li>
+                                <label for="patronymic-field">Отчество:</label>
+                                <input id="patronymic-field" name="patronymic" type="text" placeholder="Ну и отчество тоже">
+                            </li>
+                        </ul>
 
-                        </fieldset>
 
                         <fieldset class="contest-form__used">
 
@@ -100,7 +104,7 @@
                                 </li>
 
                                 <li>
-                                    <div class="dur-ctr-wrapper">
+                                    <div class="contest-form__duration-ctr">
                                         <button class="btn btn--ctr" data-action="minus" type="button">
                                             <span class="icon-minus"></span>
                                         </button>
@@ -143,36 +147,36 @@
                             <ol class="contest-form__travellers-list">
 
                                 <li>
-                                    <div class="traveller-item__name">
-                                        <div>
-                                            <span>№</span>
-                                            <label for="traveller-1">имя: *</label>
+                                    <div class="contest-form__travellers-name">
+                                        <div class="name__number">
+                                            <div class="name__number-sign">№</div>
+                                            <div class="name__number-value">1</div>
                                         </div>
                                         <div>
-                                            <span>1</span>
+                                            <label for="traveller-1">имя: *</label>
                                             <input id="traveller-1" name="traveller-name-1" type="text" placeholder="Введите ваше имя">
                                         </div>
                                     </div>
-                                    <div class="traveller-item__nickname">
+                                    <div class="contest-form__travellers-nickname">
                                         <label for="nickname-1">произвище:</label>
                                         <input id="nickname-1" name="traveller-nickname-1" type="text" placeholder="Ну как же без этого!">
                                     </div>
                                 </li>
 
                                 <li>
-                                    <div class="traveller-item__name">
-                                        <div>
-                                            <span>№</span>
-                                            <label for="traveller-2">имя: *</label>
+                                    <div class="contest-form__travellers-name">
+                                        <div class="name__number">
+                                            <div class="name__number-sign">№</div>
+                                            <div class="name__number-value">1</div>
                                         </div>
                                         <div>
-                                            <span>1</span>
+                                            <label for="traveller-2">имя: *</label>
                                             <input id="traveller-2" name="traveller-name-2" type="text" placeholder="Введите ваше имя">
                                         </div>
                                     </div>
-                                    <div class="traveller-item__nickname">
+                                    <div class="contest-form__travellers-nickname">
                                         <label for="nickname-2">произвище:</label>
-                                        <input id="nickname-2" name="traveller-nickname-2" type="text" placeholder="Ну как же без этого!">
+                                        <input id="nickname-2" name="traveller-nickname-1" type="text" placeholder="Ну как же без этого!">
                                     </div>
                                 </li>
 

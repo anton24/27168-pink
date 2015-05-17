@@ -12,23 +12,28 @@
 
     <div class="main-wrapper">
 
-        <header class="page-header  page-header--close">
+        <header class="main-header">
 
-            <div class="page-header__menu-wrapper">
-                <a href="#" class="page-header__logo-link">
-                    <img src="img/logo.png" alt="Pink Logo">
-                </a>
-                <a href="#" class="page-header__toggle  page-header__toggle--close">&#8801;</a>
-            </div>
+            <a class="main-header__logo" href="#">PINK</a>
 
-            <nav class="main-nav">
-                <ul class="main-nav__list">
-                    <li class="main-nav__active-item"><a href="#">информация</a></li>
-                    <li><a href="#">возможности</a></li>
-                    <li><a href="#">отзывы</a></li>
-                    <li><a href="#">стоимость</a></li>
+            <nav class="main-header__nav">
+                <ul class="main-header__list">
+                    <li class="main-header__list-item">
+                        <a class="main-header__link" href="#">информация</a>
+                    </li>
+                    <li class="main-header__list-item">
+                        <a class="main-header__link" href="#">возможности</a>
+                    </li>
+                    <li class="main-header__list-item">
+                        <a class="main-header__link" href="#">отзывы</a>
+                    </li>
+                    <li class="main-header__list-item">
+                        <a class="main-header__link" href="#">стоимость</a>
+                    </li>
                 </ul>
             </nav>
+
+            <button type="button" id="main-header-btn" class="btn-menu"></button>
 
         </header>
 
@@ -37,7 +42,7 @@
             <section class="promo-app">
 
                 <header class="top-header top-header--promo">
-                    <h1 class="page-title">Взгляни на жизнь иначе!</h1>
+                    <h1 class="top-header__title">Взгляни на жизнь иначе!</h1>
                     <img class="top-header__img" src="img/phone.png" alt="Pink Application">
                 </header>
 
@@ -66,18 +71,18 @@
 
                 <ul class="reasons__list">
 
-                    <li class="reasons__list-item">
-                        <h2>Поднимает настроение</h2>
+                    <li class="reasons__item">
+                        <h2 class="reasons__item-title">Поднимает настроение</h2>
                         <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
                     </li>
 
-                    <li class="reasons__list-item">
-                        <h2>Меняет мир вокруг</h2>
-                        <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                    <li class="reasons__item">
+                        <h2 class="reasons__item-title">Меняет мир вокруг</h2>
+                        <p >Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
                     </li>
 
-                    <li class="reasons__list-item">
-                        <h2>Заводит новых друзей</h2>
+                    <li class="reasons__item">
+                        <h2 class="reasons__item-title">Заводит новых друзей</h2>
                         <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
                     </li>
                 </ul>
@@ -89,7 +94,7 @@
             <div class="reviews">
                 <div class="slider-reviews">
                     <article class="slider-reviews__item">
-                        <h1 class="slider-reviews__header">Николай Петров</h1>
+                        <h1 class="slider-reviews__title">Николай Петров</h1>
                         <p class="slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                     </article>
                     <div class="slider-reviews__pagination">
@@ -103,7 +108,7 @@
             <div class="price">
 
                 <div class="price__offer">
-                    <div class="price__plan">стандарт</div>
+                    <div class="price__type">стандарт</div>
                     <div class="price__value">3,99 USD</div>
                 </div>
 
@@ -141,19 +146,25 @@
 
         <footer class="page-footer">
 
+            <div class="page-footer__title">Остались вопросы? Свяжитесь с нами!</div>
+
 
             <div class="page-footer__contacts">
 
-                <h2>Остались вопросы? Свяжитесь с нами!</h2>
+                <div class="page-footer__contacts-phone">
+                    <div class="page-footer__desc">Звоните</div>
+                    <a href="tel:+78125556666" class="page-footer__contact">+7 (812) 555-66-66</a>
+                </div>
 
-                <div class="page-footer__title">Звоните</div>
-                <a href="tel:+78125556666" class="page-footer__contact">+7 (812) 555-66-66</a>
+                <div class="page-footer__contacts-email">
+                    <div class="page-footer__desc">Пишите</div>
+                    <a href="mailto:mail@htmlacademy.ru" class="page-footer__contact">mail@htmlacademy.ru</a>
+                </div>
 
-                <div class="page-footer__title">Пишите</div>
-                <a href="mailto:mail@htmlacademy.ru" class="page-footer__contact">mail@htmlacademy.ru</a>
-
-                <div class="page-footer__title">Приезжайте в гости</div>
-                <div class="page-footer__contact">ул. Большая Конюшенная, 19/8</div>
+                <div class="page-footer__contacts-address">
+                    <div class="page-footer__desc">Приезжайте в гости</div>
+                    <div class="page-footer__contact">ул. Большая Конюшенная, 19/8</div>
+                </div>
 
             </div>
 

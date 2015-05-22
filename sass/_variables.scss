@@ -1,0 +1,76 @@
+/// Variables
+
+//== Colors
+
+$white:             #fff;
+$light-grey:        #f2f2f2;
+$very-light-grey:   #e5e5e5;
+$darkblue:          #283645;
+$very-darkblue:     #1d2631;
+$black:             #000;
+$strong-pink:       #d22856;
+$grayish-blue:      #bec2c7;
+$lime-green:        #3dc644;
+$bright-orange:     #f25b26;
+
+//== Global style
+
+$body-bg: $white;
+
+$text-color: $darkblue;
+
+
+//== Typography
+
+
+$font-family-sans-serif: 'Open Sans', Arial, sans-serif;
+$font-size-base: 14px;
+$line-height-base: 24px;
+
+
+$logo-color: $white;
+$logo-hover-color: $strong-pink;
+$logo-down-color: rgba($logo-hover-color, 0.3);
+
+//== Header
+$header-font-color: $white;
+
+$header-logo: $white;
+$header-logo-hover: $strong-pink;
+$header-logo-down: rgba($header-logo-hover, 0.3);
+
+$header-link-color: $white;
+$header-link-hover: rgba($white, 0.3);
+
+$header-bg-color: rgba($black, 0.3);
+$header-bg-color--opened: $darkblue;
+
+$header-border-top-color: #485461;
+$header-border-bottom-color: #000101;
+
+//==Promo App
+$promo-app-text-color: $white;
+$promo-app-bg-color: $very-darkblue;
+
+
+$download-btn: $white;
+$download-btn-border: $white;
+
+$download-btn-hover: $strong-pink;
+$download-btn-bg-hover: $white;
+$download-btn-down: rgba($download-btn-hover, 0.3);
+
+
+//== Reasons
+$reasons-bg-color: $light-grey;
+$reasons-header-bg-color: $white;
+$reasons-title-color: $black;
+
+
+$pagination-circle-bg-color: $grayish-blue;
+$pagination-circle-border-color: $white;
+
+$pagination-circle-active-border-color: $darkblue;
+
+$price-bg-color: $light-grey;
+$price-table-td-border-color: $very-light-grey;

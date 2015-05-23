@@ -97,10 +97,13 @@ body {
     }
 }
 
+
 .top-header {
     position: relative;
     padding-top: 66px;
-    height: 392px;
+    padding-bottom: 17px;
+    height: 375px;
+
 
     background-color: $very-darkblue;
     background-image: url("../img/background-mobile@1x.jpg");
@@ -108,6 +111,9 @@ body {
     background-repeat: no-repeat;
     background-size: auto;
 
+    .inner-page &{
+        height: auto;
+    }
     &:after {
         content: '';
         position: absolute;
@@ -118,8 +124,11 @@ body {
         background: url('../img/iphone-hand-mobile.png');
 
     }
+    .inner-page &:after {
+        display: none;
+    }
     &__title {
-        margin: 20px 0;
+        margin: 25px 0;
         font-weight: 300;
         color: $header-font-color;
         text-align: center;
@@ -565,7 +574,118 @@ body {
         background-size: 100% 100%;
         z-index: 10;
     }
+    &__logo {
+        text-align: center;
+    }
+    &__logo-link {
+        text-decoration: none;
+        line-height: 0;
+    }
+
+    &__social {
+        font-size: 0;
+        text-align: center;
+    }
+    &__social-link {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 51px;
+        height: 51px;
+        border: 3px solid $social-border-color;
+        border-radius: 50%;
+        margin-right: 12px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
 }
 
+.footer-logo {
+    width: 145px;
+    height: 40px;
+    fill: $darkblue;
+    &:hover {
+        fill: $strong-pink;
+    }
+    &:active {
+        fill: $darkblue;
+        opacity: 0.3;
+    }
+}
+
+
+
+.blog {
+
+    &__wrapper {
+        padding: 0 20px;
+        padding-top: 10px;
+    }
+
+    &__article {
+        margin-bottom: 29px;
+        border-top: 1px solid $very-light-grey;
+    }
+    &__article:first-child {
+        border-top: 0;
+    }
+
+    &__article-title {
+        margin-top: 17px;
+        margin-bottom: 8px;
+        padding-top: 10px;
+        font-size: 18px;
+        line-height: 28px;
+        a {
+            text-decoration: none;
+            color: $darkblue;
+        }
+    }
+    &__article-date {
+        margin-bottom: 20px;
+        font-size: 12px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $strong-pink;
+    }
+    &__article-text {
+        line-height: 28px;
+        a {
+            font-size: 14px;
+            text-decoration: none;
+            color: $darkblue;
+        }
+    }
+
+    &__pag {
+        padding-top: 28px;
+        font-size: 0;
+    }
+
+    &__pag-item {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 63px;
+        height: 63px;
+        border: 2px solid $very-light-grey;
+        margin-right: 9px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 63px;
+        vertical-align: top;
+        color: $darkblue;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__pag-item--active {
+        border-color: $strong-pink;
+    }
+}
 
 

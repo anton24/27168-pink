@@ -14,6 +14,12 @@
         margin-left: 20px;
         text-decoration: none;
         line-height: 0;
+
+        &:hover .header-logo,
+        &:focus .header-logo {
+            fill: $header-logo-hover;
+        }
+        
         .header-logo {
             fill: white;
             width: 74px;
@@ -64,19 +70,20 @@
     &--opened {
         background: $darkblue;
         padding-bottom: 0;
-    }
-    &--opened &__nav {
-        display: block;
-        margin-top: 28px;
-        border-top: 1px solid $header-border-bottom-color;
-    }
 
-    &--opened .cross-icon {
-        display: block;
-    }
+        &__nav {
+            display: block;
+            margin-top: 28px;
+            border-top: 1px solid $header-border-bottom-color;
+        }
 
-    &--opened .burger-icon {
-        display: none;
+        .cross-icon {
+            display: block;
+        }
+
+        .burger-icon {
+            display: none;
+        }
     }
 }
 

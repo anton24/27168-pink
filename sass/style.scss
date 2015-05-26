@@ -3,6 +3,47 @@
 @import '_header';
 @import '_footer';
 
+/*
+%no-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+%list-h {
+    @extend %no-list;
+    font-size: 0;
+    
+    > li {
+        display: inline-block;
+        font-size: $base-font-size;
+        vertical-align: top;
+    }
+}
+
+%list-v {
+    @extend %no-list;
+
+    > li {
+        display: block;
+    }
+}
+
+nav ul {
+    @extend %no-list;
+}
+
+Пример использования
+.list {
+    @extend %list-v;
+    padding: 0 20px;
+
+    > li {
+        font-size: 12px;
+        vertical-align: baseline;
+    }
+}
+*/
 
 .top-header {
     position: relative;
@@ -17,9 +58,10 @@
     background-repeat: no-repeat;
     background-size: auto;
 
-    .inner-page &{
+    .inner-page & {
         height: auto;
     }
+
     &:after {
         content: '';
         position: absolute;
@@ -61,6 +103,10 @@
     cursor: pointer;
     background: transparent;
     outline: none;
+
+    &:focus svg {
+        fill: $header-logo-hover;        
+    }
 }
 
 .promo-app {
@@ -72,29 +118,32 @@
         padding-top: 28px;
         padding-bottom: 25px;
         text-align: center;
-    }
-    &__download-list {
-        margin: 0;
-        padding: 0;
-        margin-bottom: 20px;
 
-        list-style: none;
-        text-align: center;
-        font-size: 0;
+        &-list {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 20px;
 
-        & li {
-            display: inline-block;
-            margin-right: 36px;
-            vertical-align: baseline;
+            list-style: none;
+            text-align: center;
+            font-size: 0;
+
+            li {
+                display: inline-block;
+                margin-right: 36px;
+                vertical-align: baseline;
+
+                &:last-child {
+                    margin-right: 0;    
+                }
+            }
         }
-        & li:last-child {
-            margin-right: 0;
+
+        &-desc {
+            margin: 0;
+            padding: 0 20px;
+            font-weight: 300;
         }
-    }
-    &__download-desc {
-        margin: 0;
-        padding: 0 20px;
-        font-weight: 300;
     }
 }
 
@@ -166,7 +215,11 @@
 
         list-style: none;
 
-        background:ur
+        background:ur /* ?? */
+
+        &:before {
+
+        }
     }
     &__list:before {
         content: '';
@@ -185,7 +238,7 @@
         margin-bottom: 36px;
         text-align: center;
 
-        & p {
+        p {
             margin: 0;
         }
     }

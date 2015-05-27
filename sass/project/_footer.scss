@@ -1,0 +1,178 @@
+.page-footer {
+
+    &__contacts {
+        padding: 0 20px;
+        padding-bottom: 23px;
+
+        &-item {
+            margin-bottom: 22px;
+            text-align: center;
+        }
+
+        &-title {
+            margin-bottom: 6px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        &-info {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 24px;
+            line-height: 30px;
+            text-decoration: none;
+            color: $strong-pink;
+        }
+    }
+
+    &__title {
+        padding: 0;
+        margin: 0;
+        margin-top: 45px;
+        margin-bottom: 39px;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    &__map {
+        position: relative;
+        min-height: 200px;
+        width: 100%;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 0;
+            z-index: 10;
+            display: block;
+            width: 100%;
+            height: 32px;
+            background: url("../img/triangle-white-footer.svg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 40px;
+        text-align: center;
+        
+        &-link {
+            display: inline-block;
+            width: 145px;
+            height: 40px;
+            line-height: 0;
+            text-decoration: none;
+        }
+    }
+    
+    &__social {
+        margin-bottom: 40px;
+        text-align: center;
+        
+        svg {
+            fill: $strong-pink;
+        }
+        
+        .footer-yt-icon {
+            width: 15px;
+            height: 14px;
+        }
+
+        .footer-tw-icon {
+            width: 17px;
+            height: 15px;
+        }
+
+        .footer-fb-icon {
+            width: 9px;
+            height: 19px;
+        }
+
+        &-wrap {
+            padding: 46px 0;
+            line-height: 0;
+        }
+
+        &-link {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 51px;
+            height: 51px;
+            margin-right: 12px;
+            font-size: 16px;
+            vertical-align: top;
+            line-height: 51px;
+            text-decoration: none;
+            text-align: center;
+            border: 3px solid $social-border-color;
+            border-radius: 50%;
+            
+            &:last-child {
+                margin-right: 0;
+            }
+            
+            &:hover {
+                border-color: $darkblue;
+            }
+            
+            &:active  {
+                border-color: $darkblue;
+                opacity: 0.3;
+            }
+        }
+    }
+
+    &__copyright {
+        font-size: 0;
+        text-align: center;
+
+        &-link {
+            display: inline-block;
+            width: 27px;
+            height: 34px;
+            vertical-align: top;
+            text-decoration: none;
+        }
+
+        &-text {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+            line-height: 34px;
+            margin-right: 15px;
+        }
+    }
+
+    .footer-htmlacademy-icon {
+        width: 100%;
+        height: 100%;
+        fill: $strong-pink;
+        
+        &:hover {
+            fill: $darkblue;
+        }
+        
+        &:active {
+            opacity: 0.3;
+        }
+    }
+
+    .footer-logo {
+        width: 100%;
+        height: 100%;
+        fill: $darkblue;
+        
+        &:hover {
+            fill: $strong-pink;
+        }
+        
+        &:active {
+            fill: $darkblue;
+            opacity: 0.3;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.btn {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    &--download {
+        padding: 13px 38px;
+        margin: 0 auto;
+        margin-bottom: 31px;
+
+        color: $download-btn;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        border: 3px solid $download-btn-border;
+        border-radius: 30px;
+
+        &:hover {
+            color: $download-btn-hover;
+            background-color: $download-btn-bg-hover;
+        }
+        &:active {
+            color: $download-btn-down;
+        }
+    }
+}
+
+.btn-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+}

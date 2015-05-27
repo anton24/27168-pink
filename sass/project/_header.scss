@@ -1,25 +1,28 @@
 .main-header {
     position: absolute;
-    box-sizing: border-box;
+    z-index: 1;
     display: block;
-    padding: 20px 0;
-    padding-bottom: 16px;
+    box-sizing: border-box;
     width: 100%;
     min-height: 66px;
+    padding: 20px 0;
+    padding-bottom: 16px;
     background: $header-bg-color;
-    z-index: 1;
 
     &__logo {
         display: inline-block;
         margin-left: 20px;
         text-decoration: none;
         line-height: 0;
+
         .header-logo {
-            fill: white;
             width: 74px;
+            fill: white;
+        
             &:hover {
                 fill: $header-logo-hover;
             }
+        
             &:active {
                 fill: $header-logo-down;
             }
@@ -28,6 +31,30 @@
 
     .cross-icon {
         display: none;
+        width: 23px;
+        height: 23px;
+        fill: $white;
+        
+        &:hover {
+            fill: $header-logo-hover;
+        }
+        
+        &:active {
+            fill: $header-logo-down;
+        }
+    }
+
+    .burger-icon {
+        width: 50px;
+        fill: $white;
+        
+        &:hover {
+            fill: $header-logo-hover;
+        }
+        
+        &:active {
+            fill: $header-logo-down;
+        }
     }
 
     &__nav {
@@ -36,15 +63,17 @@
 
     &__list {
         display: block;
-        list-style: none;
         margin: 0;
         padding: 0;
+        list-style: none;
+
+        &-item {
+            display: block;
+            border-top: 1px solid $header-border-top-color;
+            border-bottom: 1px solid $header-border-bottom-color;
+        }
     }
-    &__list-item {
-        display: block;
-        border-top: 1px solid $header-border-top-color;
-        border-bottom: 1px solid $header-border-bottom-color;
-    }
+
     &__link {
         display: block;
         height: 62px;
@@ -53,18 +82,21 @@
         text-decoration: none;
         text-transform: uppercase;
         color: $logo-color;
+        
         &:hover {
             color: $logo-hover-color;
         }
+        
         &:active {
             color: $logo-down-color;
         }
     }
 
     &--opened {
-        background: $darkblue;
         padding-bottom: 0;
+        background: $darkblue;
     }
+
     &--opened &__nav {
         display: block;
         margin-top: 28px;
@@ -77,29 +109,5 @@
 
     &--opened .burger-icon {
         display: none;
-    }
-}
-
-
-.burger-icon {
-    fill: $white;
-    width: 50px;
-    &:hover {
-        fill: $header-logo-hover;
-    }
-    &:active {
-        fill: $header-logo-down;
-    }
-}
-
-.cross-icon {
-    fill: $white;
-    width: 23px;
-    height: 23px;
-    &:hover {
-        fill: $header-logo-hover;
-    }
-    &:active {
-        fill: $header-logo-down;
     }
 }

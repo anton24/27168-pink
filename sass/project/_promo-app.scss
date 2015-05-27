@@ -1,0 +1,33 @@
+.promo-app {
+    color: $promo-app-text-color;
+    background-color: $promo-app-bg-color;
+
+    &__download {
+        padding-top: 28px;
+        padding-bottom: 25px;
+        text-align: center;
+    }
+    &__download-list {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+        font-size: 0;
+        text-align: center;
+        list-style: none;
+
+        & li {
+            display: inline-block;
+            margin-right: 36px;
+            vertical-align: baseline;
+        }
+        & li:last-child {
+            margin-right: 0;
+        }
+    }
+    
+    &__download-desc {
+        margin: 0;
+        padding: 0 20px;
+        font-weight: 300;
+    }
+}

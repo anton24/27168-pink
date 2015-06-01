@@ -141,15 +141,19 @@
             border-radius: 50%;
             border: 3px solid $light-grey;
             cursor: pointer;
-            
-            &--active {
-                border-color: $pagination-circle-active-border-color;
-                background-color: $white;
-            }
 
             &:last-child {
                 margin-right: 0;
             }
+
+            &:hover {
+                background-color: $pagination-circle-hover-color;
+            }
+        }
+
+        .price__pag-item--active {
+            border-color: $pagination-circle-active-border-color;
+            background-color: $white;
         }
     }
 }

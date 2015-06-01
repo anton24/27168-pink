@@ -25,29 +25,42 @@
         font-size: 0;
         text-align: center;
         line-height: 0;
+        
+        &-item {
+            box-sizing: border-box;
+            vertical-align: top;
+            margin-right: 16px;
+            width: 12px;
+            height: 12px;
+            background-color: $pagination-circle-bg-color;
+            border-radius: 100%;
+            border: 3px solid $pagination-circle-border-color;
+            cursor: pointer;
+
+
+            &::-moz-focus-inner {
+                border: 0;
+                padding: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                background-color: $pagination-circle-hover-color;
+            }
+        }
+
+        .slider-reviews__pag-item--active {
+            border-color: $pagination-circle-active-border-color;
+            background-color: $white;
+        }
     }
 
     &__pag-item {
-        box-sizing: border-box;
-        vertical-align: top;
-        margin-right: 16px;
-        width: 12px;
-        height: 12px;
-        background-color: $pagination-circle-bg-color;
-        border-radius: 100%;
-        border: 3px solid $pagination-circle-border-color;
-        cursor: pointer;
-
-        &--active {
-            border-color: $pagination-circle-active-border-color;
-            background-color: $white;;
-        }
-        &::-moz-focus-inner {
-            border: 0;
-            padding: 0;
-        }
-        &:last-child {
-            margin-right: 0;
-        }
+        
     }
+
+
 }

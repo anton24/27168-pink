@@ -16,11 +16,19 @@ $bright-orange:     #f25b26;
 $social-border-color: #e9ebec;
 $quote-author-color: #a8a8a8;
 
+$btn-submit-color: #2aab6d;
+$btn-submit-hover-color: #1c9b5e;
+$btn-submit-active-text-color: #7dbd99;
+
 //== Global style
 
 $body-bg: $white;
 
 $text-color: $darkblue;
+
+$mobile: 320px;
+$tablet: 640px;
+$desktop: 1024px;
 
 
 //== Typography
@@ -74,6 +82,8 @@ $pagination-circle-bg-color: $grayish-blue;
 $pagination-circle-border-color: $white;
 
 $pagination-circle-active-border-color: $darkblue;
+
+$pagination-circle-hover-color: #7e868f;
 
 $price-bg-color: $light-grey;
 $price-table-td-border-color: $very-light-grey;

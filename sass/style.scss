@@ -1,6 +1,7 @@
 @import 'helpers/_variables';
 @import 'helpers/_extends';
 @import 'helpers/_helpers';
+@import 'helpers/_mixins';
 
 //Reset
 @import 'reset/_normalize';
@@ -8,6 +9,8 @@
 //Base
 @import 'base/_base';
 @import 'base/_buttons';
+@import 'base/_modals';
+@import 'base/_icon-fonts';
 
 //Project
 @import 'project/_header';

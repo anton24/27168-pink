@@ -1,7 +1,13 @@
 .btn {
     display: inline-block;
+    vertical-align: top;
     margin: 0;
     padding: 0;
+
+    &::-moz-focus-inner {
+        padding: 0;
+        margin: 0;
+    }
 
     &--download {
         padding: 13px 38px;
@@ -21,10 +27,109 @@
             color: $download-btn-hover;
             background-color: $download-btn-bg-hover;
         }
+
         &:active {
             color: $download-btn-down;
         }
     }
+
+    &--ctr {
+        width: 61px;
+        font-size: 36px;
+        background-color: $white;
+
+        &:hover {
+            border-color: $darkblue;
+        }
+
+        &:active {
+            border-color: $darkblue;
+            background-color: $darkblue;
+            color: $white;
+        }
+    }
+
+    &--upload-photo {
+        box-sizing: border-box;
+        width: 100%;
+        height: 63px;
+        font-size: 18px;
+        line-height: 59px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        border: 2px solid $very-light-grey;
+        background-color: $white;
+        cursor: pointer;
+
+        &:hover {
+            border-color: $darkblue;
+        }
+
+        &:active {
+            color: $white;
+            border-color: $darkblue;
+            background-color: $darkblue;
+        }
+    }
+
+    &--remove-photo {
+        position: absolute;
+        box-sizing: border-box;
+        height: 32px;
+        width: 32px;
+        top: -16px;
+        right: -16px;
+
+        background-color: $white;
+        border: 2px solid $very-light-grey;
+        border-radius: 50%;
+        outline: none;
+
+        &:hover {
+            border-color: $darkblue;
+            .icon-cancel {
+                fill: $darkblue;
+            }
+        }
+        
+        &:active {
+            border-color: $darkblue;
+            background-color: $darkblue;
+            .icon-cancel {
+                fill: $white;
+            }
+        }
+
+    }
+
+    &--submit {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        width: 100%;
+        height: 63px;
+        border-radius: 2px;
+        box-sizing: border-box;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $white;
+        background-color: $btn-submit-color;
+
+        &:hover {
+            background-color: $btn-submit-hover-color;
+        }
+
+        &:active {
+            color: $btn-submit-active-text-color;
+        }
+
+        &:disabled {
+            background-color: $very-light-grey;
+        }
+    }
+
 }
 
 .btn-menu {
@@ -40,4 +145,13 @@
     cursor: pointer;
     background: transparent;
     outline: none;
+}
+
+
+@media(min-width: $tablet + 1px) and (max-width: $desktop) {
+    .btn-menu {
+        top: 44px;
+        right: 5%;
+    }
+
 }

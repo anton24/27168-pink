@@ -23,6 +23,16 @@
             line-height: 30px;
             text-decoration: none;
             color: $strong-pink;
+
+            &--email:hover {
+                text-decoration: underline;
+                color: $darkblue;
+            }
+
+            &--email:active {
+                text-decoration: none;
+                color: rgba($black, 0.3);
+            }
         }
     }
 
@@ -93,6 +103,7 @@
         }
 
         &-wrap {
+            display: none;
             padding: 46px 0;
             line-height: 0;
         }
@@ -176,3 +187,37 @@
         }
     }
 }
+
+.inner-page {
+    .page-footer__social-wrap {
+        display: block;
+    }
+}
+
+@media(min-width: $tablet + 1px) and (max-width: $desktop) {
+    .page-footer {
+        
+        &__social-wrap {
+            display: block;
+            text-align: center;
+        }
+        
+        &__logo {
+            float: left;
+            margin-left: 5%;
+            margin-bottom: 0;
+        }
+
+        &__social {
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        &__copyright {
+            float: right;
+            margin-right: 5%;
+            margin-bottom: 0;
+        }
+    }
+}
+

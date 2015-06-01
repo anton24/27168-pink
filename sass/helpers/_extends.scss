@@ -3,3 +3,21 @@
 	padding: 0;
 	list-style: none;
 }
+
+%list-h {
+    @extend %no-list;
+    font-size: 0;
+    
+    > li {
+        display: inline-block;
+        font-size: $font-size-base;
+        vertical-align: top;
+    }
+}
+%list-v {
+    @extend %no-list;
+    
+    > li {
+        display: block;
+    }
+}

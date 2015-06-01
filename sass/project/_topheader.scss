@@ -7,7 +7,7 @@
     background-image: url("../img/background-mobile@1x.jpg");
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
 
     .inner-page & {
         height: auto;
@@ -39,5 +39,36 @@
     &__img {
         position: absolute;
         bottom: 0;
+    }
+}
+
+
+@media(min-width: $mobile) 
+    and (max-width: $tablet)
+    and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+    
+    .top-header {
+        background-image: url("../img/background-mobile@2x.jpg");
+    }
+}
+
+
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) {
+    .top-header {
+        background-image: url("../img/background-mobile@3x.jpg");
+    }
+}
+
+
+
+
+
+@media(min-width: $tablet + 1px) and (max-width: $desktop) {
+    .top-header {
+        padding-top: 110px;
+        background-image: url("../img/background-tablet@1x.jpg");
     }
 }

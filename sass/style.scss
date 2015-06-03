@@ -13,13 +13,11 @@
 @import 'base/_icon-fonts';
 
 //Project
-@import 'project/_header';
-@import 'project/_topheader';
-@import 'project/_promo-app';
-@import 'project/_reasons';
-@import 'project/_reviews';
-@import 'project/_price';
-@import 'project/_blog';
-@import 'project/_post';
-@import 'project/_contest';
-@import 'project/_footer';
+@import 'project/_layout/_header';
+@import 'project/_layout/_topheader';
+@import 'project/_layout/_footer';
+
+@import 'project/_pages/_index';
+@import 'project/_pages/_blog';
+@import 'project/_pages/_post';
+@import 'project/_pages/_contest';

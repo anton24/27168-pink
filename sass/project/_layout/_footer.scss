@@ -7,6 +7,7 @@
         &-item {
             margin-bottom: 22px;
             text-align: center;
+            width: 280px;
         }
 
         &-title {
@@ -194,7 +195,23 @@
     }
 }
 
-@media(min-width: $tablet + 1px) and (max-width: $desktop) {
+@media all and (min-width: $tablet) and (max-width: $desktop) {
+    .page-footer {
+        
+        &__contacts {
+            text-align: center;
+            
+            &-item {
+                text-align: center;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+
+    }
+}
+
+@media all and (min-width: $tablet + 1px) and (max-width: $desktop) {
     .page-footer {
         
         &__social-wrap {

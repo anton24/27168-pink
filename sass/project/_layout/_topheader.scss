@@ -21,8 +21,8 @@
         width: 258px;
         height: 286px;
         background: url('../img/iphone-hand-mobile.png');
-
     }
+
     .inner-page &:after {
         display: none;
     }
@@ -48,7 +48,8 @@
     and (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi) {
     
-    .top-header {
+    .top-header,
+    .content-header {
         background-image: url("../img/background-mobile@2x.jpg");
     }
 }
@@ -57,18 +58,49 @@
 @media only screen 
 and (min-device-width : 414px) 
 and (max-device-width : 736px) {
-    .top-header {
+    .top-header,
+    .content-header {
         background-image: url("../img/background-mobile@3x.jpg");
     }
 }
 
 
-
-
-
-@media(min-width: $tablet + 1px) and (max-width: $desktop) {
-    .top-header {
+@media(min-width: $tablet + 1px) {
+    .top-header,
+    .content-header {
         padding-top: 110px;
         background-image: url("../img/background-tablet@1x.jpg");
+    }
+}
+
+
+.content-header {
+    position: relative;
+    padding-top: 66px;
+    background-color: $very-darkblue;
+    background-image: url("../img/background-mobile@1x.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__title {
+        margin: 25px 0;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: (34/24) + em;
+        text-align: center;
+        color: $header-font-color;
+    }
+
+    @media all and (min-width: $tablet) and (max-width: $desktop) {
+        padding: 180px 40px 0;
+
+        &__title {
+            font-size: 48px;
+            position: relative;
+            text-align: center;
+            max-width: 280px;
+            z-index: 2;
+        }
     }
 }

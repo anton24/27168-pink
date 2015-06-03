@@ -4,6 +4,15 @@
 
 .slider-reviews {
     margin-bottom: 34px;
+
+    &__item {
+        // padding: на высоту имени автора 
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
     
     &__title {
         margin: 0;
@@ -58,7 +67,11 @@
         }
     }
 
-    &__pag-item {
+    @media all and (min-width: $tablet) and (max-width: $desktop) {
+
+        &__pag {
+            display: none;
+        }
         
     }
 

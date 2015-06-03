@@ -1,0 +1,59 @@
+.app-download {
+
+    color: $promo-app-text-color;
+    background-color: $promo-app-bg-color;
+    position: relative;
+    margin: 306px 0 0;
+    padding-top: 28px;
+    padding-bottom: 25px;
+    text-align: center;
+    z-index: 1;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -286px;
+        left: 0;
+        width: 258px;
+        height: 286px;
+        background: url('../img/iphone-hand-mobile.png') no-repeat 100% 100%;
+    }
+    
+    &__list {
+        @extend %list-h;
+        margin-bottom: 20px;
+        text-align: center;
+
+        li {
+            font-size: $font-size-base;
+            line-height: 63px;
+            margin-right: 36px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        img {
+            vertical-align: middle;
+        }
+    }
+
+    &__desc {
+        margin: 0;
+        padding: 0 20px;
+        font-weight: 300;
+    }
+
+    @media all and (min-width: $tablet) and (max-width: $desktop) {
+        background: none;
+        margin: 0;
+        max-width: 300px;
+
+        &:before {
+            bottom: 0;
+            width: $tablet; 
+        }
+
+    }
+}
